@@ -5,11 +5,25 @@
  */
 package serverrmi;
 
+import java.io.Serializable;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
 public interface IServices extends Remote{
-    void giveData(int posX, int posY,int mapa) throws RemoteException;
-    ArrayList<Integer> receiveData() throws RemoteException;
+    public class Player implements Serializable{// inner class
+        public String name;
+        public int posX;
+        public int posY;
+        public int map;
+        public Player(String name,int posX,int posY ,int map){
+            this.name=name;
+            this.posX=posX;
+            this.posY=posY;
+            this.map=map;
+        }
+    }
+    void giveData(Player p) throws RemoteException;
+    ArrayList<Player> receiveData() throws RemoteException;
+    void conexionPlayer(Player p) throws RemoteException;
 }
