@@ -30,4 +30,7 @@ public interface IServices extends Remote{
     void giveData(Player p) throws RemoteException;
     ArrayList<Player> receiveData() throws RemoteException;
     void conexionPlayer(Player p) throws RemoteException;
+    void setpauseGame(boolean b) throws RemoteException;
+    boolean getPauseState() throws RemoteException;
+    void disconnectPlayer(Player p) throws RemoteException;
 }
