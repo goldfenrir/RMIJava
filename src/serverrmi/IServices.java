@@ -16,11 +16,15 @@ public interface IServices extends Remote{
         public int posX;
         public int posY;
         public int map;
-        public Player(String name,int posX,int posY ,int map){
+        public int dir;
+        public int s;
+        public Player(String name,int posX,int posY ,int map,int dir,int s){
             this.name=name;
             this.posX=posX;
             this.posY=posY;
             this.map=map;
+            this.dir=dir;
+            this.s=s;
         }
     }
     void giveData(Player p) throws RemoteException;
