@@ -33,4 +33,6 @@ public interface IServices extends Remote{
     void setpauseGame(boolean b) throws RemoteException;
     boolean getPauseState() throws RemoteException;
     void disconnectPlayer(Player p) throws RemoteException;
+    void agregarListo() throws RemoteException;
+    boolean todosListos() throws RemoteException;
 }
