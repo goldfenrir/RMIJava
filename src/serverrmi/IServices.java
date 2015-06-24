@@ -37,4 +37,7 @@ public interface IServices extends Remote{
     void disconnectPlayer(Player p) throws RemoteException;
     void agregarListo() throws RemoteException;
     boolean todosListos() throws RemoteException;
+    void setFinGame(boolean b) throws RemoteException;
+    boolean getFinGame() throws RemoteException;
+    int getTime() throws RemoteException;
 }
