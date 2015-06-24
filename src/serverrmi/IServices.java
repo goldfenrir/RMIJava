@@ -18,6 +18,7 @@ public interface IServices extends Remote{
         public int map;
         public int dir;
         public int s;
+        public int numberofFriends=0;
         public Player(String name,int posX,int posY ,int map,int dir,int s){
             this.name=name;
             this.posX=posX;
